@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dangel & Damián Store | Elegancia en Sábanas, Perfumes y Moda</title>
+  <meta name="description" content="Dangel & Damián Store – Tu destino de lujo en Venezuela para sábanas premium, perfumes exclusivos y moda de las mejores marcas del mundo." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════ NAVBAR ══════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="logo.jpg" alt="Dangel & Damián Logo" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#categorias">Productos</a></li>
+        <li><a href="#marcas">Marcas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="https://wa.me/584243752134" target="_blank" class="nav-cta" id="nav-whatsapp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Escríbenos
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#categorias">Productos</a>
+      <a href="#marcas">Marcas</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- ══════════════ HERO ══════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-particles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">— Venezuela · 2026 —</div>
+      <img src="logo.jpg" alt="Dangel & Damián" class="hero-logo" />
+      <h1 class="hero-title">
+        Elegancia que<br/>
+        <em>se siente</em> y se vive
+      </h1>
+      <p class="hero-subtitle">
+        Sábanas de lujo, perfumes icónicos y moda exclusiva.<br/>
+        Descubre lo mejor del mercado venezolano.
+      </p>
+      <div class="hero-actions">
+        <a href="#categorias" class="btn-gold">Explorar Colección</a>
+        <a href="https://wa.me/584243752134" target="_blank" class="btn-outline" id="hero-whatsapp">
+          Consultar Ahora
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════ DIVIDER ══════════════ -->
+  <div class="ornamental-divider" aria-hidden="true">
+    <div class="orn-line"></div>
+    <svg class="orn-diamond" viewBox="0 0 40 40"><path d="M20 2 L38 20 L20 38 L2 20 Z" stroke="#c9a84c" stroke-width="1.5" fill="none"/><path d="M20 8 L32 20 L20 32 L8 20 Z" stroke="#c9a84c" stroke-width="0.8" fill="rgba(201,168,76,0.1)"/></svg>
+    <div class="orn-line"></div>
+  </div>
+
+  <!-- ══════════════ NOSOTROS ══════════════ -->
+  <section class="about" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-frame">
+            <img src="logo.jpg" alt="Dangel & Damián elegancia" class="about-img" />
+            <div class="about-frame-border"></div>
+          </div>
+          <div class="about-stat-card">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Marcas Premium</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <span class="section-tag">Nuestra Historia</span>
+          <h2 class="section-title">Donde el lujo<br/>encuentra tu hogar</h2>
+          <p>En <strong>Dangel & Damián Store</strong> creemos que rodearte de elegancia transforma tu vida. Somos tu guía de confianza hacia los productos más exclusivos del mercado: sábanas que abrazan, perfumes que enamoran y moda que define.</p>
+          <p>Nacimos con una misión clara: acercarte a las mejores marcas del mundo, con la calidez y el servicio personalizado que mereces.</p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">✦</div>
+              <div>
+                <strong>Autenticidad</strong>
+                <span>Solo marcas verificadas</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">✦</div>
+              <div>
+                <strong>Exclusividad</strong>
+                <span>Selección premium</span>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">✦</div>
+              <div>
+                <strong>Atención</strong>
+                <span>Trato personalizado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CATEGORÍAS ══════════════ -->
+  <section class="categories" id="categorias">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nuestras Categorías</span>
+        <h2 class="section-title">Un mundo de<br/>elegancia te espera</h2>
+      </div>
+      <div class="cat-grid">
+
+        <div class="cat-card" id="cat-sabanas">
+          <div class="cat-glow"></div>
+          <div class="cat-icon-wrap">
+            <svg viewBox="0 0 80 80" class="cat-icon"><ellipse cx="40" cy="55" rx="32" ry="12" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity="0.4"/><rect x="10" y="28" width="60" height="26" rx="4" fill="none" stroke="#c9a84c" stroke-width="1.5"/><path d="M10 34 Q40 44 70 34" stroke="#c9a84c" stroke-width="1.2" fill="none"/><rect x="18" y="18" width="44" height="14" rx="3" fill="none" stroke="#c9a84c" stroke-width="1.2"/><line x1="18" y1="25" x2="62" y2="25" stroke="#c9a84c" stroke-width="0.8"/></svg>
+          </div>
+          <h3>Sábanas de Lujo</h3>
+          <p>Experimenta el descanso definitivo con nuestra selección de sábanas en algodón egipcio, seda y materiales premium de las mejores marcas mundiales.</p>
+          <div class="cat-tags">
+            <span>Algodón Egipcio</span>
+            <span>Seda Natural</span>
+            <span>Bambú Orgánico</span>
+          </div>
+          <a href="https://wa.me/584243752134?text=Hola!%20Me%20interesan%20las%20sábanas%20premium" target="_blank" class="cat-cta" id="cta-sabanas">Consultar →</a>
+        </div>
+
+        <div class="cat-card cat-card--featured" id="cat-perfumes">
+          <div class="cat-badge">Más Solicitado</div>
+          <div class="cat-glow"></div>
+          <div class="cat-icon-wrap">
+            <svg viewBox="0 0 80 80" class="cat-icon"><rect x="28" y="32" width="24" height="36" rx="5" fill="none" stroke="#c9a84c" stroke-width="1.5"/><rect x="33" y="24" width="14" height="10" rx="2" fill="none" stroke="#c9a84c" stroke-width="1.2"/><rect x="36" y="18" width="8" height="8" rx="2" fill="none" stroke="#c9a84c" stroke-width="1.2"/><line x1="40" y1="14" x2="40" y2="18" stroke="#c9a84c" stroke-width="1.5"/><ellipse cx="40" cy="50" rx="8" ry="10" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/><circle cx="40" cy="50" r="3" fill="rgba(201,168,76,0.3)"/></svg>
+          </div>
+          <h3>Perfumes Icónicos</h3>
+          <p>Las fragancias más deseadas del mundo: desde Chanel y Dior hasta Tom Ford y Creed. Encuentra tu firma olfativa perfecta.</p>
+          <div class="cat-tags">
+            <span>Chanel</span>
+            <span>Tom Ford</span>
+            <span>Dior</span>
+            <span>Creed</span>
+          </div>
+          <a href="https://wa.me/584243752134?text=Hola!%20Me%20interesan%20los%20perfumes" target="_blank" class="cat-cta" id="cta-perfumes">Consultar →</a>
+        </div>
+
+        <div class="cat-card" id="cat-moda">
+          <div class="cat-glow"></div>
+          <div class="cat-icon-wrap">
+            <svg viewBox="0 0 80 80" class="cat-icon"><path d="M28 20 L20 32 L30 35 L30 62 L50 62 L50 35 L60 32 L52 20 L44 26 C42 28 38 28 36 26 Z" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-linejoin="round"/><line x1="30" y1="35" x2="50" y2="35" stroke="#c9a84c" stroke-width="0.8"/><line x1="40" y1="20" x2="40" y2="26" stroke="#c9a84c" stroke-width="1.2"/></svg>
+          </div>
+          <h3>Moda Exclusiva</h3>
+          <p>Curación de las tendencias más exclusivas en ropa, accesorios y lifestyle. Viste con la confianza de quien sabe lo que vale.</p>
+          <div class="cat-tags">
+            <span>Haute Couture</span>
+            <span>Accesorios</span>
+            <span>Lifestyle</span>
+          </div>
+          <a href="https://wa.me/584243752134?text=Hola!%20Me%20interesa%20la%20moda%20exclusiva" target="_blank" class="cat-cta" id="cta-moda">Consultar →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ MARCAS ══════════════ -->
+  <section class="brands" id="marcas">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Top Marcas · Venezuela 2026</span>
+        <h2 class="section-title">Las marcas más<br/>deseadas del mercado</h2>
+        <p class="section-desc">Trabajamos con las marcas líderes del mercado venezolano 2026, garantizando calidad y autenticidad en cada producto.</p>
+      </div>
+
+      <div class="brands-tabs">
+        <button class="tab-btn tab-active" data-tab="sabanas" id="tab-sabanas">Sábanas & Hogar</button>
+        <button class="tab-btn" data-tab="perfumes" id="tab-perfumes">Perfumes</button>
+        <button class="tab-btn" data-tab="moda" id="tab-moda">Moda</button>
+      </div>
+
+      <div class="brands-panel" id="panel-sabanas">
+        <div class="brand-cards">
+          <div class="brand-card">
+            <div class="brand-initial">P</div>
+            <div class="brand-info">
+              <strong>Pratesi</strong>
+              <span>Sábanas Premium Italianas</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-initial">F</div>
+            <div class="brand-info">
+              <strong>Frette</strong>
+              <span>Lencería de Lujo</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-initial">B</div>
+            <div class="brand-info">
+              <strong>Biltmore</strong>
+              <span>Colecciones Hoteleras</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-initial">V</div>
+            <div class="brand-info">
+              <strong>Versace Home</strong>
+              <span>Lujo Italiano</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-initial">H</div>
+            <div class="brand-info">
+              <strong>Hermès Maison</strong>
+              <span>Hogar de Alta Gama</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-initial">C</div>
+            <div class="brand-info">
+              <strong>Caleffi</strong>
+              <span>Textil de Lujo</span>
+              <div class="brand-stars">★★★★☆</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="brands-panel hidden" id="panel-perfumes">
+        <div class="brand-cards">
+          <div class="brand-card">
+            <div class="brand-initial">C</div>
+            <div class="brand-info">
+              <strong>Chanel</strong>
+              <span>Icono de la Perfumería</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-initial">D</div>
+            <div class="brand-info">
+              <strong>Dior</strong>
+              <span>Alta Costura Olfativa</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-initial">T</div>
+            <div class="brand-info">
+              <strong>Tom Ford</strong>
+              <span>Fragancias de Nicho</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-initial">C</div>
+            <div class="brand-info">
+              <strong>Creed</strong>
+              <span>Perfumería de Lujo</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-initial">Y</div>
+            <div class="brand-info">
+              <strong>YSL Beauty</strong>
+              <span>Elegancia Francesa</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-initial">G</div>
+            <div class="brand-info">
+              <strong>Guerlain</strong>
+              <span>La Maison du Parfum</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="brands-panel hidden" id="panel-moda">
+        <div class="brand-cards">
+          <div class="brand-card">
+            <div class="brand-initial">G</div>
+            <div class="brand-info">
+              <strong>Gucci</strong>
+              <span>Moda Italiana</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-initial">L</div>
+            <div class="brand-info">
+              <strong>Louis Vuitton</strong>
+              <span>Maison de Lujo</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-initial">B</div>
+            <div class="brand-info">
+              <strong>Balenciaga</strong>
+              <span>Vanguardia del Diseño</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-initial">P</div>
+            <div class="brand-info">
+              <strong>Prada</strong>
+              <span>Sofisticación Milanesa</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-initial">V</div>
+            <div class="brand-info">
+              <strong>Versace</strong>
+              <span>Audacia Italiana</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="brand-card">
+            <div class="brand-initial">B</div>
+            <div class="brand-info">
+              <strong>Burberry</strong>
+              <span>Elegancia Británica</span>
+              <div class="brand-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════ PROMISE STRIP ══════════════ -->
+  <section class="promise-strip">
+    <div class="promise-inner">
+      <div class="promise-item">
+        <svg viewBox="0 0 32 32" class="promise-icon"><path d="M16 3 L19 11 L28 11 L21 17 L24 25 L16 20 L8 25 L11 17 L4 11 L13 11 Z" fill="none" stroke="#c9a84c" stroke-width="1.5"/></svg>
+        <span>Productos 100% Auténticos</span>
+      </div>
+      <div class="promise-dot" aria-hidden="true">◆</div>
+      <div class="promise-item">
+        <svg viewBox="0 0 32 32" class="promise-icon"><circle cx="16" cy="16" r="12" fill="none" stroke="#c9a84c" stroke-width="1.5"/><path d="M10 16 L14 20 L22 12" stroke="#c9a84c" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span>Atención Personalizada</span>
+      </div>
+      <div class="promise-dot" aria-hidden="true">◆</div>
+      <div class="promise-item">
+        <svg viewBox="0 0 32 32" class="promise-icon"><path d="M16 4 C9 4 4 9 4 16 C4 23 9 28 16 28 C23 28 28 23 28 16" fill="none" stroke="#c9a84c" stroke-width="1.5"/><path d="M22 4 L28 4 L28 10" stroke="#c9a84c" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <span>Respuesta Inmediata</span>
+      </div>
+      <div class="promise-dot" aria-hidden="true">◆</div>
+      <div class="promise-item">
+        <svg viewBox="0 0 32 32" class="promise-icon"><rect x="6" y="10" width="20" height="16" rx="2" fill="none" stroke="#c9a84c" stroke-width="1.5"/><path d="M11 10 L11 7 C11 5 13 3 16 3 C19 3 21 5 21 7 L21 10" fill="none" stroke="#c9a84c" stroke-width="1.5"/></svg>
+        <span>Seguro y Confiable</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ CONTACTO ══════════════ -->
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left">
+          <span class="section-tag">Hablemos</span>
+          <h2 class="section-title">¿Listo para vivir<br/>la experiencia?</h2>
+          <p>Escríbenos directamente por WhatsApp y recibe asesoría personalizada. Estamos aquí para encontrar exactamente lo que buscas.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" class="contact-icon" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>+58 424-3752134</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <svg viewBox="0 0 24 24" class="contact-icon" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              <div>
+                <strong>Venezuela</strong>
+                <span>Servicio a todo el país</span>
+              </div>
+            </div>
+          </div>
+          <a href="https://wa.me/584243752134?text=Hola%20Dangel%20%26%20Damián!%20Me%20gustaría%20recibir%20más%20información%20sobre%20sus%20productos." target="_blank" class="btn-gold btn-large" id="contact-whatsapp-btn">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Iniciar Conversación
+          </a>
+        </div>
+        <div class="contact-right">
+          <div class="contact-card">
+            <img src="logo.jpg" alt="Dangel & Damián" class="contact-logo" />
+            <h3>Dangel & Damián Store</h3>
+            <p class="contact-tagline">Elegancia en Sábanas,<br/>Perfumes y Moda</p>
+            <div class="contact-divider"></div>
+            <p class="contact-hours">Lunes – Sábado<br/><strong>9:00 AM – 7:00 PM</strong></p>
+            <p class="contact-hours">Domingo<br/><strong>10:00 AM – 3:00 PM</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <img src="logo.jpg" alt="Dangel & Damián" class="footer-logo" />
+        <p>© 2026 Dangel & Damián Store · Todos los derechos reservados.</p>
+        <p class="footer-sub">Elegancia que se siente y se vive · Venezuela</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════ FLOATING WHATSAPP ══════════════ -->
+  <a href="https://wa.me/584243752134?text=Hola!%20Vi%20su%20página%20y%20me%20gustaría%20más%20información." target="_blank" class="float-wa" id="float-whatsapp" aria-label="Contactar por WhatsApp">
+    <div class="float-wa-pulse"></div>
+    <svg viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="float-wa-label">¿Hablamos?</span>
+  </a>
+
+  <!-- ══════════════ SCROLL TO TOP ══════════════ -->
+  <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20"><path d="M18 15 L12 9 L6 15"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
