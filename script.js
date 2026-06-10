@@ -10,12 +10,15 @@
  * @param {object} params      - Parámetros adicionales del evento
  */
 function trackEvent(eventName, params = {}) {
-  // Google Analytics 4
-  if (typeof window._gtag === 'function') {
-    window._gtag('event', eventName, params);
-  }
+  // Google Tag Manager
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: eventName,
+    ...params
+  });
+  
   // Debug en consola (desactiva en producción si deseas)
-  console.info('[DD Tracking]', eventName, params);
+  console.info('[DD Tracking GTM]', eventName, params);
 }
 
 // ── CONVERSIÓN: WHATSAPP BUTTONS ───────────────────────
@@ -24,13 +27,13 @@ function trackEvent(eventName, params = {}) {
  * Cada entrada: { id, label, category }
  */
 const WA_BUTTONS = [
-  { id: 'nav-whatsapp',         label: 'Navbar — Escríbenos',      category: 'navegacion'  },
-  { id: 'hero-whatsapp',        label: 'Hero — Consultar Ahora',   category: 'hero'        },
-  { id: 'cta-sabanas',          label: 'Cat — Sábanas',            category: 'sabanas'     },
-  { id: 'cta-perfumes',         label: 'Cat — Perfumes',           category: 'perfumes'    },
-  { id: 'cta-moda',             label: 'Cat — Moda',               category: 'moda'        },
-  { id: 'contact-whatsapp-btn', label: 'Contacto — CTA Principal', category: 'contacto'    },
-  { id: 'float-whatsapp',       label: 'Flotante — WhatsApp',      category: 'flotante'    },
+  { id: 'nav-whatsapp', label: 'Navbar — Escríbenos', category: 'navegacion' },
+  { id: 'hero-whatsapp', label: 'Hero — Consultar Ahora', category: 'hero' },
+  { id: 'cta-sabanas', label: 'Cat — Sábanas', category: 'sabanas' },
+  { id: 'cta-perfumes', label: 'Cat — Perfumes', category: 'perfumes' },
+  { id: 'cta-moda', label: 'Cat — Moda', category: 'moda' },
+  { id: 'contact-whatsapp-btn', label: 'Contacto — CTA Principal', category: 'contacto' },
+  { id: 'float-whatsapp', label: 'Flotante — WhatsApp', category: 'flotante' },
 ];
 
 WA_BUTTONS.forEach(({ id, label, category }) => {
@@ -40,10 +43,10 @@ WA_BUTTONS.forEach(({ id, label, category }) => {
   el.addEventListener('click', () => {
     // Evento principal de conversión
     trackEvent('whatsapp_click', {
-      event_category:  'whatsapp_conversion',
-      event_label:     label,
+      event_category: 'whatsapp_conversion',
+      event_label: label,
       product_category: category,
-      button_id:       id,
+      button_id: id,
     });
 
     // También registra como conversión de lead en GA4
@@ -117,7 +120,7 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ── MOBILE MENU ────────────────────────────────────────
-const hamburger  = document.getElementById('hamburger');
+const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 
 hamburger.addEventListener('click', () => {
@@ -137,7 +140,7 @@ scrollTopBtn.addEventListener('click', () => {
 });
 
 // ── REVEAL ON SCROLL ───────────────────────────────────
-const reveals  = document.querySelectorAll('.reveal');
+const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry, i) => {
@@ -153,7 +156,7 @@ reveals.forEach(el => observer.observe(el));
 
 // ── BRANDS TABS ────────────────────────────────────────
 const tabBtns = document.querySelectorAll('.tab-btn');
-const panels  = document.querySelectorAll('.brands-panel');
+const panels = document.querySelectorAll('.brands-panel');
 
 tabBtns.forEach(btn => {
   btn.addEventListener('click', () => {
@@ -231,7 +234,7 @@ window.addEventListener('scroll', () => {
   const scrolled = window.scrollY;
   if (scrolled < window.innerHeight && heroContent) {
     heroContent.style.transform = `translateY(${scrolled * 0.25}px)`;
-    heroContent.style.opacity   = `${1 - scrolled / 700}`;
+    heroContent.style.opacity = `${1 - scrolled / 700}`;
   }
 }, { passive: true });
 
@@ -239,7 +242,7 @@ window.addEventListener('scroll', () => {
 document.querySelectorAll('.cat-card, .brand-card').forEach(card => {
   card.addEventListener('mousemove', e => {
     const rect = card.getBoundingClientRect();
-    card.style.setProperty('--mx', `${((e.clientX - rect.left) / rect.width)  * 100}%`);
-    card.style.setProperty('--my', `${((e.clientY - rect.top)  / rect.height) * 100}%`);
+    card.style.setProperty('--mx', `${((e.clientX - rect.left) / rect.width) * 100}%`);
+    card.style.setProperty('--my', `${((e.clientY - rect.top) / rect.height) * 100}%`);
   });
 });
