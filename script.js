@@ -3,110 +3,25 @@
    Versión con tracking de conversiones WhatsApp + GA4
    ══════════════════════════════════════════════════════ */
 
-// ── TRACKING HELPER ────────────────────────────────────
-/**
- * Registra un evento de conversión en GA4 y en la consola.
- * @param {string} eventName   - Nombre del evento GA4
- * @param {object} params      - Parámetros adicionales del evento
- */
-function trackEvent(eventName, params = {}) {
-  // Google Tag Manager
-  window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push({
-    event: eventName,
-    ...params
-  });
-  
-  // Debug en consola (desactiva en producción si deseas)
-  console.info('[DD Tracking GTM]', eventName, params);
-}
-
-// ── CONVERSIÓN: WHATSAPP BUTTONS ───────────────────────
-/**
- * Configuración de todos los botones de WhatsApp con sus labels.
- * Cada entrada: { id, label, category }
- */
+// ── TRACKING SIMPLE PARA GOOGLE TAG MANAGER ──────────────
 const WA_BUTTONS = [
-  { id: 'nav-whatsapp', label: 'Navbar — Escríbenos', category: 'navegacion' },
-  { id: 'hero-whatsapp', label: 'Hero — Consultar Ahora', category: 'hero' },
-  { id: 'cta-sabanas', label: 'Cat — Sábanas', category: 'sabanas' },
-  { id: 'cta-perfumes', label: 'Cat — Perfumes', category: 'perfumes' },
-  { id: 'cta-moda', label: 'Cat — Moda', category: 'moda' },
-  { id: 'contact-whatsapp-btn', label: 'Contacto — CTA Principal', category: 'contacto' },
-  { id: 'float-whatsapp', label: 'Flotante — WhatsApp', category: 'flotante' },
+  'nav-whatsapp', 'hero-whatsapp', 'cta-sabanas', 
+  'cta-perfumes', 'cta-moda', 'contact-whatsapp-btn', 'float-whatsapp'
 ];
 
-WA_BUTTONS.forEach(({ id, label, category }) => {
+WA_BUTTONS.forEach(id => {
   const el = document.getElementById(id);
-  if (!el) return;
-
-  el.addEventListener('click', () => {
-    // Evento principal de conversión
-    trackEvent('whatsapp_click', {
-      event_category: 'whatsapp_conversion',
-      event_label: label,
-      product_category: category,
-      button_id: id,
-    });
-
-    // También registra como conversión de lead en GA4
-    trackEvent('generate_lead', {
-      currency: 'USD',
-      value: 1,
-      lead_source: 'whatsapp',
-      product_category: category,
-    });
-  });
-});
-
-// ── TRACKING: TIEMPO EN PÁGINA ──────────────────────────
-// Dispara evento si el usuario llega a los 30s (engagement)
-let engagementFired = false;
-setTimeout(() => {
-  if (!engagementFired) {
-    trackEvent('page_engagement', {
-      event_category: 'comportamiento',
-      event_label: 'mas_de_30_segundos',
-      value: 30,
-    });
-    engagementFired = true;
-  }
-}, 30000);
-
-// ── TRACKING: SCROLL DEPTH ──────────────────────────────
-const scrollMilestones = { 25: false, 50: false, 75: false, 100: false };
-window.addEventListener('scroll', () => {
-  const scrolled = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
-  [25, 50, 75, 100].forEach(pct => {
-    if (!scrollMilestones[pct] && scrolled >= pct) {
-      scrollMilestones[pct] = true;
-      trackEvent('scroll_depth', {
-        event_category: 'comportamiento',
-        event_label: `scroll_${pct}_porciento`,
-        value: pct,
+  if (el) {
+    el.addEventListener('click', () => {
+      // Envía un evento súper simple a GTM
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event': 'whatsapp_click',
+        'boton': id
       });
-    }
-  });
-}, { passive: true });
-
-// ── TRACKING: SECCIONES VISTAS ──────────────────────────
-const trackedSections = ['nosotros', 'categorias', 'marcas', 'contacto'];
-trackedSections.forEach(id => {
-  const el = document.getElementById(id);
-  if (!el) return;
-  const sectionObs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        trackEvent('section_view', {
-          event_category: 'navegacion',
-          event_label: `vista_seccion_${id}`,
-          section_name: id,
-        });
-        sectionObs.disconnect();
-      }
+      console.log('✅ Clic en WhatsApp registrado:', id);
     });
-  }, { threshold: 0.4 });
-  sectionObs.observe(el);
+  }
 });
 
 // ══════════════════════════════════════════════════════
@@ -176,13 +91,6 @@ tabBtns.forEach(btn => {
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
           }, i * 60);
-        });
-
-        // Tracking de tab activo
-        trackEvent('brands_tab_click', {
-          event_category: 'engagement',
-          event_label: `tab_${tab}`,
-          tab_name: tab,
         });
       } else {
         p.classList.add('hidden');
