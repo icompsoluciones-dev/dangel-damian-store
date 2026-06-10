@@ -1,5 +1,5 @@
 # robots.txt — Dangel & Damián Store
-# https://dangel-damian-store.icompsoluciones.workers.dev/
+# https://dangel-damian-store.pages.dev/
 
 User-agent: *
 Allow: /
@@ -9,7 +9,7 @@ Disallow: /images/private/
 Disallow: /*.json$
 
 # Sitemap
-Sitemap: https://dangel-damian-store.icompsoluciones.workers.dev/sitemap.xml
+Sitemap: https://dangel-damian-store.pages.dev/sitemap.xml
 
 # Crawl delay sugerido (segundos)
 Crawl-delay: 5
